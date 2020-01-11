@@ -1,8 +1,8 @@
-import helper from './helper.js';
-import './style.scss';
-import newImg from './newImg';
+import helper from './js/helper';
+import newImg from './js/newImg';
+import './scss/style.scss';
 
-var res = helper();
+const res = helper();
 console.log('main:' + res);
 
 document.body.appendChild(newImg());

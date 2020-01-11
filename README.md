@@ -1,6 +1,6 @@
 # webpack-basic-demo
 
-簡單快速使用 webpack  
+簡單快速使用 webpack 4 
 沒有使用任何框架單純 JavaScript + HTML + SCSS
 
 ## Plugins
@@ -15,3 +15,5 @@
 9. node-sass
 10. sass-loader
 11. terser-webpack-plugin
+12. postcss-loader
+13. autoprefixer
