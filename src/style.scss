@@ -1,0 +1,10 @@
+$color: rgba(orange, 0.3);
+body {
+  background: $color;
+  // background-image: url(./assets/img01.jpg);
+}
+
+img {
+  width: 300px;
+  height: auto;
+}
