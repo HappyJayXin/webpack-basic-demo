@@ -10,7 +10,7 @@ const entry = {
 
 const output = {
   path: path.resolve(__dirname, 'dist'),
-  filename: '[name].js'
+  filename: '[name].[hash].js'
 }
 
 const devServer = {
@@ -119,7 +119,7 @@ const plugins = [
     }
   }),
   new MiniCssExtractPlugin({
-    filename: 'css/[name].css'
+    filename: 'css/[name].[hash].css'
   }),
   new CleanWebpackPlugin()
 ]
