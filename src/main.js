@@ -1,5 +1,7 @@
 import helper from './js/helper';
 import newImg from './js/newImg';
+
+import './js/swiper';
 import './scss/style.scss';
 import './css/flexboxgrid.css';
 
