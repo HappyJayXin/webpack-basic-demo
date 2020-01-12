@@ -18,3 +18,5 @@
 12. postcss-loader
 13. autoprefixer
 14. mini-css-extract-plugin
+15. purgecss-webpack-plugin
+16. glob

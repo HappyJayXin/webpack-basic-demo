@@ -1,6 +1,7 @@
 import helper from './js/helper';
 import newImg from './js/newImg';
 import './scss/style.scss';
+import './css/flexboxgrid.css';
 
 const res = helper();
 console.log('main:' + res);

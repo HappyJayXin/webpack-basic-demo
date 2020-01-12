@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const glob = require('glob');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 const path = require('path');
 
 const entry = {
@@ -52,15 +54,7 @@ const _module = {
       ],
     },
     {
-      test: /\.css$/i,
-      use: [
-        'style-loader',
-        'postcss-loader',
-        'css-loader'
-      ],
-    },
-    {
-      test: /\.s[ac]ss$/i,
+      test: /\.(c|sc)ss$/i,
       use: [
         {
           loader: MiniCssExtractPlugin.loader
@@ -72,10 +66,9 @@ const _module = {
         {
           loader: 'postcss-loader',
           options: {
-            sourceMap: true,
-            config: {
-              path: 'postcss.config.js'
-            }
+            plugins: [
+              require('autoprefixer')
+            ]
           }
         },
         {
@@ -121,7 +114,10 @@ const plugins = [
   new MiniCssExtractPlugin({
     filename: 'css/[name].[hash].css'
   }),
-  new CleanWebpackPlugin()
+  new CleanWebpackPlugin(),
+  new PurgecssPlugin({
+    paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`, { nodir: true }),
+  })
 ]
 
 module.exports = {
