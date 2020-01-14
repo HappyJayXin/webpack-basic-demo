@@ -97,7 +97,14 @@ const _module = {
           }
         },
       ],
-    }
+    },
+    {
+      test: /\.ts$/,
+      exclude: [
+        path.resolve(__dirname, 'node_modules'),
+      ],
+      use: ['ts-loader'],
+    },
   ]
 }
 
@@ -118,7 +125,11 @@ const plugins = [
   new PurgecssPlugin({
     paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`, { nodir: true }),
   })
-]
+];
+
+const resolve = {
+  extensions: ['.ts', '.js']
+}
 
 module.exports = {
   entry,
@@ -126,5 +137,6 @@ module.exports = {
   devServer,
   optimization,
   module: _module,
-  plugins
+  plugins,
+  resolve
 }

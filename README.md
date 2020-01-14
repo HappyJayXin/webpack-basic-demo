@@ -20,3 +20,5 @@
 14. [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
 15. [purgecss-webpack-plugin](https://github.com/FullHuman/purgecss-webpack-plugin)
 16. [glob](https://github.com/FullHuman/purgecss-webpack-plugin)
+17. [ts-loader](https://github.com/TypeStrong/ts-loader)
+18. [typescript](https://github.com/TypeStrong/ts-loader)
