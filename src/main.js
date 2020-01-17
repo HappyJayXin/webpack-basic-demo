@@ -7,6 +7,8 @@ import './js/swiper';
 import './scss/style.scss';
 import './css/flexboxgrid.css';
 
+import './js/app';
+
 const res = helper();
 console.log('main:' + res);
 

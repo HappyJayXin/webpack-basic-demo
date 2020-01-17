@@ -1,7 +1,7 @@
 # webpack-basic-demo
 
 簡單快速使用 webpack 4  
-沒有使用任何框架單純 JavaScript + HTML + SCSS
+JavaScript + HTML + SCSS + Typescript + React
 
 ## Plugins
 1. [@babel/core](https://github.com/babel/babel-loader)
@@ -22,3 +22,6 @@
 16. [glob](https://github.com/FullHuman/purgecss-webpack-plugin)
 17. [ts-loader](https://github.com/TypeStrong/ts-loader)
 18. [typescript](https://github.com/TypeStrong/ts-loader)
+19. [react](https://github.com/facebook/react)
+20. [react-dom](https://github.com/facebook/react/tree/master/packages/react-dom)
+21. [@babel/preset-react](https://github.com/babel/babel/tree/master/packages/babel-preset-react)
